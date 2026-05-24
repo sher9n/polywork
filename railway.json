@@ -4,9 +4,7 @@
     "builder": "RAILPACK"
   },
   "deploy": {
-    "startCommand": "npm run start:web",
-    "healthcheckPath": "/api/health",
-    "healthcheckTimeout": 30,
+    "startCommand": "if [ \"$RAILWAY_SERVICE_NAME\" = \"worker\" ]; then npm run start:worker; else npm run start:web; fi",
     "restartPolicyType": "ON_FAILURE",
     "restartPolicyMaxRetries": 10
   }
