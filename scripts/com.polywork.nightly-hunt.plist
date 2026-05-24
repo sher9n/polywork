@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyLists-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.polywork.nightly-hunt</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Applications/MAMP/htdocs/polywork/scripts/cron-nightly-hunt.sh</string>
+    </array>
+
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>4</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+
+    <key>RunAtLoad</key>
+    <false/>
+
+    <key>StandardOutPath</key>
+    <string>/Applications/MAMP/htdocs/polywork/.cron-logs/nightly-hunt.stdout.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Applications/MAMP/htdocs/polywork/.cron-logs/nightly-hunt.stderr.log</string>
+
+    <key>WorkingDirectory</key>
+    <string>/Applications/MAMP/htdocs/polywork</string>
+</dict>
+</plist>

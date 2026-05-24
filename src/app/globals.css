@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+:root {
+  --color-up: #4ade80;
+  --color-down: #f87171;
+  --color-line: #27272a;
+  --color-ink-1: #18181b;
+  --color-ink-2: #09090b;
+}
+
+body {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+}
+
+.num { font-variant-numeric: tabular-nums; }
+.up { color: var(--color-up); }
+.down { color: var(--color-down); }

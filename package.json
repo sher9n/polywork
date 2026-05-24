@@ -1,0 +1,46 @@
+{
+  "name": "polywork",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Polymarket strategy research lab. Stratified backtest framework + genetic strategy evolution + single-page dashboard. Paper money only.",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p ${PORT:-3000}",
+    "start:web": "npm run migrate && next start -p ${PORT:-3000}",
+    "start:worker": "tsx scripts/run-live.ts",
+    "lint": "next lint",
+    "migrate": "tsx src/db/migrate.ts",
+    "ingest:markets": "tsx scripts/ingest-markets.ts",
+    "ingest:trades": "tsx scripts/ingest-trades.ts",
+    "ingest:status": "tsx scripts/ingest-status.ts",
+    "ingest:audit": "tsx scripts/audit-data-quality.ts",
+    "features": "tsx scripts/compute-features.ts",
+    "replicate": "tsx scripts/replicate-finding-1.ts",
+    "grid-search": "tsx scripts/grid-search-sql.ts",
+    "evolve": "tsx scripts/evolve.ts",
+    "report": "tsx scripts/report.ts",
+    "seed-agents": "tsx scripts/seed-agents.ts",
+    "live": "tsx scripts/run-live.ts"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "next": "^15.1.0",
+    "postgres": "^3.4.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tsx": "^4.19.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.0"
+  }
+}

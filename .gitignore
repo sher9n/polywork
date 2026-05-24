@@ -1,0 +1,29 @@
+node_modules/
+.next/
+out/
+build/
+dist/
+.env
+.env.local
+.env.*.local
+*.log
+.DS_Store
+.vercel
+tsconfig.tsbuildinfo
+next-env.d.ts
+
+# Local run/cron logs
+.cron-logs/
+.live-logs/
+.dev-logs/
+.ingest-logs/
+
+# Local DB dumps
+*.sql.gz
+*.dump
+dump.sql
+polywork-*.dump
+
+# Editor
+.vscode/
+.idea/
